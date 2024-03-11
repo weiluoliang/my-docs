@@ -27,12 +27,12 @@ Java是跨平台语言，看官方给的一张图，我们写的Java代码在最
 java -Xms2048M -Xmx2048M -Xmn1024M -Xss512K -XX:MetaspaceSize=256M -XX:MaxMetaspaceSize=256M -jar microservice-eureka-server.jar 
 ```
 
--Xms:初始堆大小
--Xmx:最大堆大小
--Xmn:新生代大小
--Xss:栈大小
--XX:MetaspaceSize:初始元空间大小
--XX:MaxMetaspaceSize:最大元空间大小
+-Xms:初始堆大小  
+-Xmx:最大堆大小  
+-Xmn:新生代大小  
+-Xss:栈大小  
+-XX:MetaspaceSize:初始元空间大小  
+-XX:MaxMetaspaceSize:最大元空间大小  
 
 
 ### 堆

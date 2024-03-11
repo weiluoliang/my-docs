@@ -31,12 +31,12 @@ highlights:
     features:
       - title: 深入JVM
         icon: clipboard-check
-        details: 检查 Markdown 链接
-        link: https://theme-hope.vuejs.press/zh/guide/markdown/others.html#link-check
+        details: 运行时数据区，GC优化，类加载机制
+        link: ./jvm/
 
       - title: 数据库
         icon: box-archive
-        details: 用样式装饰 Markdown 内容
+        details: SQL优化，MVCC机制，分布式事务
         link: https://theme-hope.vuejs.press/zh/guide/markdown/hint.html
 
       - title: spring
