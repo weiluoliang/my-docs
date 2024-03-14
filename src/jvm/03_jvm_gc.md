@@ -90,7 +90,23 @@ region的类型有以下几种:
 - 空间整合 G1收集器会进行空间整合，减少内存碎片
 - 可预测的停顿 G1可以设置期望停顿时间，然后在这个时间内尽可能多的进行垃圾回收
 
+#### 垃圾收集分类
+- Young GC  
+并不是Eden区满了马上出发Young GC，而是会去计算Eden去回收大概要多久时间，如果远远小于期望停顿时间，而是增加Eden区的使用，等到下一次Eden区满了,再计算一次，如果大于期望停顿时间，就会触发Young GC。
 
+- Mixed GC
+老年代的堆占有率达到设置的值(-XX:InitiatingHeapOccupancyPercent)则触发Mixed GC，回收所有的Young和部分old（根据预期停顿时间）和大对象，一般会先做mixed GC，使用复制算法进行，
+把region中的存活对象复制到其他region中，然后清理掉这个region，这样可以减少碎片，如果没有足够的内存存放这些对象则会触发Full GC。
+
+- Full GC
+使用单线程进行，系统会停止所有的应用线程，进行垃圾回收，这个过程会比较长，会导致系统停顿。使用标记-清除算法，然后进行空间整理。
+
+#### 核心参数
+- -XX:+UseG1GC:使用G1收集器
+- -XX:MaxGCPauseMillis 设置期望停顿时间
+- -XX:G1HeapRegionSize 设置region的大小
+- -XX:InitiatingHeapOccupancyPercent 设置老年代的堆占有率达到多少时触发Mixed GC
+- -XX:G1MixedGCLiveThresholdPercent 设置Mixed GC后存活对象占比多少时触发Full GC
 
 ### ZGC收集器
 
