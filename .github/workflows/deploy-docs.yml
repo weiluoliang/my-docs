@@ -24,7 +24,7 @@ jobs:
       - name: 安装 pnpm
         uses: pnpm/action-setup@v2
         with:
-          run_install: true
+        #  run_install: true
           version: 8
 
 
@@ -33,6 +33,10 @@ jobs:
         with:
           node-version: 20
           cache: pnpm
+      - name: Use taobao registry
+        run: npm config set registry https://registry.npmmirror.com/
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
 
 
       - name: 构建文档
