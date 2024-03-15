@@ -110,5 +110,15 @@ region的类型有以下几种:
 
 ### ZGC收集器
 
+#### 设计目标
+- 停顿时间不超过10ms
+- 停顿时间不会随着堆内存的增加而增加
+- 支持TB级别的堆内存（8MB~4TB）
+
+
+
 ### Shenandoah收集器
+
+## 参考
+- [新一代垃圾回收器ZGC的探索与实践](https://tech.meituan.com/2020/08/06/new-zgc-practice-in-meituan.html)
 
