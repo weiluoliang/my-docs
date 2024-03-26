@@ -31,7 +31,7 @@ editLink: false
 垃圾回收器是实现垃圾回收算法的具体实现，根据不同的算法和实现，可以分为以下几种
 先看一张图，了解一下各个垃圾回收器的关系  
 
-![](https://www.luoliang.top/images/jvm_%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%9F.png)
+![](https://images.luoliang.top/jvm_%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%9F.png)
 
 
 ### Serial收集器
@@ -62,7 +62,7 @@ CMS(Concurrent Mark Sweep)收集器，是一种以获取最短回收停顿时间
 - 并发清除 清除对象
 - 并发清理 清理对象
 
-![](https://www.luoliang.top/images/jvm_cms%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E8%BF%87%E7%A8%8B.jpeg)
+![](https://images.luoliang.top/jvm_cms%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E8%BF%87%E7%A8%8B.jpeg)
 
 ### G1收集器
 G1 (Garbage-First)收集器，最大的特点是可以设置期望停顿时间，然后在这个时间内尽可能多的进行垃圾回收。
@@ -80,7 +80,7 @@ region的类型有以下几种:
 - 最终标记 修正并发标记期间因用户程序继续运行导致标记产生变动的对象(STW)
 - 筛选回收 选择回收对象
 
-![](https://www.luoliang.top/images/jvm_g1_%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E8%BF%87%E7%A8%8B.png)
+![](https://images.luoliang.top/jvm_g1_%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E8%BF%87%E7%A8%8B.png)
 
 
 

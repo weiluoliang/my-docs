@@ -15,12 +15,12 @@ Java是跨平台语言，看官方给的一张图，我们写的Java代码在最
 ，最终通过Java虚拟机帮助我们去运行，根据不同操作系统翻译成不同的机器码运行，从而实现了跨平台的特性。  
 
 
-![](https://www.luoliang.top/images/jdk.png)
+![](https://images.luoliang.top/jdk.png)
 
 
 ## 运行时数据区
 
-![](https://www.luoliang.top/images/jvm_%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA.png)
+![](https://images.luoliang.top/jvm_%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA.png)
   
 启动java的参数示例
 ```java
@@ -38,7 +38,7 @@ java -Xms2048M -Xmx2048M -Xmn1024M -Xss512K -XX:MetaspaceSize=256M -XX:MaxMetasp
 ### 堆
 堆分为新生代和老年代，新生代又分为Eden区和Survivor区，老年代是存放长期存活的对象，新生代是存放新创建的对象。
 
-![](https://www.luoliang.top/images/jvm_%E5%A0%86%E7%BB%93%E6%9E%84.png)
+![](https://images.luoliang.top/jvm_%E5%A0%86%E7%BB%93%E6%9E%84.png)
 
 
 ### 方法区
@@ -53,14 +53,14 @@ java -Xms2048M -Xmx2048M -Xmn1024M -Xss512K -XX:MetaspaceSize=256M -XX:MaxMetasp
 
 我们一般可以通过javap命令生成更可读的JVM字节码指令文件：javap -v Math.class
 
-![](https://www.luoliang.top/images/jvm_%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84_%E5%8F%8D%E7%BC%96%E8%AF%91%E5%AD%97%E8%8A%82%E7%A0%81.png)
+![](https://images.luoliang.top/jvm_%E5%86%85%E5%AD%98%E7%BB%93%E6%9E%84_%E5%8F%8D%E7%BC%96%E8%AF%91%E5%AD%97%E8%8A%82%E7%A0%81.png)
 
 
 ### 虚拟机栈
 
 虚拟机栈里面放的是一个个栈帧，每个栈帧对应一个方法，结构如下：  
 
-![](https://www.luoliang.top/images/jvm_%E6%A0%88%E5%B8%A7%E7%BB%93%E6%9E%84.png)
+![](https://images.luoliang.top/jvm_%E6%A0%88%E5%B8%A7%E7%BB%93%E6%9E%84.png)
  
 - 局部变量表  存放方法执行过程中的局部变量
 - 操作数栈   存放方法执行过程中的临时变量，以及方法执行过程中的计算结果
