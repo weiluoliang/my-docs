@@ -9,6 +9,13 @@ export default sidebar({
       prefix: "jvm/",
       link: "jvm/",
       children: "structure",
+    },
+    {
+      text: "系统设计",
+      icon: "laptop-code",
+      prefix: "systems_design/",
+      link: "systems_design/",
+      children: "structure",
     }
   ],
 });
