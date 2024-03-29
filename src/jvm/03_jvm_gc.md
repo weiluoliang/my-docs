@@ -109,6 +109,14 @@ region的类型有以下几种:
 - -XX:G1MixedGCLiveThresholdPercent 设置Mixed GC后存活对象占比多少时触发Full GC
 
 ### ZGC收集器
+优点：
+- GC时间能控制在10ms范围内
+- GC时长只跟GC Roots有关，跟存活对象没有关系
+
+关键技术：
+- 着色指针
+- 读屏障
+
 
 #### 设计目标
 - 停顿时间不超过10ms
